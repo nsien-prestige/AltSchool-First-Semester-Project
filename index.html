@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>First Semester Project</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="mid-container">
+                <input type="text" class="display remove-outline" id="display" readonly>
+
+                <section class="input-section">
+                    <div class="inputs">
+                        <button onclick="appendToDisplay('1')" class="btn btn-primary remove-outline">1</button>
+                        <button onclick="appendToDisplay('2')" class="btn btn-primary remove-outline">2</button>
+                        <button onclick="appendToDisplay('3')" class="btn btn-primary remove-outline">3</button>
+                        <button onclick="appendToDisplay('4')" class="btn btn-primary remove-outline">4</button>
+                        <button onclick="appendToDisplay('5')" class="btn btn-primary remove-outline">5</button>
+                        <button onclick="appendToDisplay('6')" class="btn btn-primary remove-outline">6</button>
+                        <button onclick="appendToDisplay('7')" class="btn btn-primary remove-outline">7</button>
+                        <button onclick="appendToDisplay('8')" class="btn btn-primary remove-outline">8</button>
+                        <button onclick="appendToDisplay('9')" class="btn btn-primary remove-outline">9</button>
+                        <button onclick="appendToDisplay('.')" class="btn btn-primary remove-outline">.</button>
+                        <button onclick="appendToDisplay('0')" class="btn btn-primary remove-outline">0</button>
+                        <button onclick="deleteLastChar()" class="btn btn-primary remove-outline"><img src="images/cancel button.png" alt="cancel button" class="cancel-button"></button>
+                    </div>  
+
+                    <div class="operators">
+                        <button onclick="appendToDisplay('/')" class="symbols symbols-primary remove-outline">÷</button>
+                        <button onclick="appendToDisplay('*')" class="symbols symbols-primary remove-outline">×</button>
+                        <button onclick="appendToDisplay('+')" class="symbols symbols-primary remove-outline">+</button>
+                        <button onclick="appendToDisplay('-')" class="symbols symbols-primary remove-outline">-</button>
+                        <button onclick="appendToDisplay('%')" class="symbols symbols-primary remove-outline">%</button>
+                        <button onclick="appendToDisplay('^')" class="symbols symbols-primary  remove-outline">^</button>
+                        <button onclick="clearDisplay()" class="symbols symbols-primary remove-outline">C</button>
+                        <button onclick="calculate()" class="symbols symbols-primary remove-outline">＝</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="history-container">
+            <h2>History</h2>
+            <div id="history-list"></div>
+            <button onclick="clearHistory()" class="clear-history-btn">Clear All History</button>
+        </div>
+    </main>
+</body>
+</html>
